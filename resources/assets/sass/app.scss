@@ -1,5 +1,50 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-body{
-  font-family: Lato;
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table;
+  font-weight: 100;
+  font-family: 'Lato';
+}
+
+.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content {
+  text-align: center;
+  display: inline-block;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.parking-calculator-form {
+  margin-top: 15px;
+  input {
+    height: 20px;
+  }
+  input[type="submit"] {
+    border: solid 1px lightgray;
+    height: 28px;
+    width: 100px;
+  }
+  input[type="submit"]:hover {
+    background-color: #B0BEC5;
+  }
+}
+
+#results{
+  margin-top: 10px;
+  color: mediumseagreen;
+  font-size: 40px;
 }

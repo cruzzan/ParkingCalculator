@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', array('url' => route('calculate')));
 });
+
+Route::post('/', ['as' => 'calculate', function () {
+    return view('home', array('url' => route('calculate'), 'result' => 'Now we have a result'));
+}]);
