@@ -16,5 +16,11 @@ Route::get('/', function () {
 });
 
 Route::post('/', ['as' => 'calculate', function () {
-    return view('home', array('url' => route('calculate'), 'result' => 'Now we have a result'));
+    return view(
+        'home',
+        array(
+            'url' => route(Route::current()->getName()),
+            'result' => 'Now we have a result'
+        )
+    );
 }]);
