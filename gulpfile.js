@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 var gulp = require('gulp');
+var phpunit = require('gulp-phpunit');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,7 +18,5 @@ elixir(function(mix) {
 });
 
 gulp.task('phpunit', function() {
-    elixir(function(mix) {
-        mix.phpUnit();
-    });
+    gulp.src('phpunit.xml').pipe(phpunit());
 });
