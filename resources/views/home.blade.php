@@ -18,4 +18,10 @@
         </div>
     @endif
 
+    @if(isset($error))
+        <div id="error">
+            {{ $error }}
+        </div>
+    @endif
+
 @endsection
