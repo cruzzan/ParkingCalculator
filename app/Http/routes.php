@@ -15,12 +15,4 @@ Route::get('/', function () {
     return view('home', array('url' => route('calculate')));
 });
 
-Route::post('/', ['as' => 'calculate', function () {
-    return view(
-        'home',
-        array(
-            'url' => route(Route::current()->getName()),
-            'result' => 'Now we have a result'
-        )
-    );
-}]);
+Route::post('/', ['as' => 'calculate', 'uses' => 'ParkingCalculationController@calculate']);
